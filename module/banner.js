@@ -1,6 +1,8 @@
 // 首页轮播图
+const requestLocal = require('../common/requestLocal')
 
 module.exports = (query, request) => {
+  console.log('bannerrrrrr')
   const type =
     {
       0: 'pc',
@@ -14,4 +16,6 @@ module.exports = (query, request) => {
     { clientType: type },
     { crypto: 'api', proxy: query.proxy, realIP: query.realIP },
   )
+
+  // return requestLocal({ dataName: 'banner', propName: 'banners' })
 }

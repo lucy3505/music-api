@@ -1,5 +1,8 @@
+const requestLocal = require('../common/requestLocal')
+
 // 数字专辑-新碟上架
 module.exports = (query, request) => {
+  console.log('新碟上架')
   const data = {
     limit: query.limit || 30,
     offset: query.offset || 0,
@@ -18,4 +21,5 @@ module.exports = (query, request) => {
       realIP: query.realIP,
     },
   )
+  // return requestLocal({ dataName: 'topAlbum', propName: 'products' })
 }
